@@ -1,0 +1,136 @@
+* {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: [inicio]1fr [metade-esquerda]1fr [metade-diretia] 1fr[fim];
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 50px;
+    gap: 10px;
+    width: 60%;
+}
+
+.card {
+    border: 1px solid #808080;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    /* width: 50%; */
+    border-radius: 1em;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.card p {
+    color: #7C3AED;
+    font-weight: 600;
+}
+
+.card h3 {
+    font-weight: 700;
+    color: #1E293B;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card h3 strong {
+    font-weight: 700;
+    color: #1E293B;
+}
+
+.card button {
+    background-color: transparent;
+    border: 2px solid #ccc;
+    color: #1E293B;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+
+}
+
+.card-container>.card:nth-child(2) {
+    background-color: #0F172A;
+    color: white;
+}
+
+.card-container>.card:nth-child(2) button {
+    background-color: #996DFF;
+    color: white;
+}
+
+.card-container>.card:nth-child(2) p {
+    color: #996DFF;
+}
+
+.card-container>.card:nth-child(2) h3 {
+    color: white;
+}
+
+.card-container>.card:nth-child(2) h3 strong {
+    color: white;
+}
+
+.content {
+    border-top: 1px solid #ccc;
+    margin-top: 1em;
+    padding-top: 1em;
+
+}
+
+.header .content li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.content img {
+    width: 18px;
+    height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        /* Duas colunas em telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+        /* Uma coluna em telas pequenas */
+        width: 90%;
+    }
+}
